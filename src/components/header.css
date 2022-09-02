@@ -1,0 +1,24 @@
+@import url("./../App.css");
+
+.header {
+    background-color: var(--bordo-color) !important;
+}
+
+.brand {
+    color: var(--white-color);
+}
+
+.brand:hover {
+    color: var(--white-color);
+}
+
+.header-link {
+    text-decoration: none;
+    color: var(--white-color);
+    transform: 1s;
+}
+
+.header-link:hover {
+    color: var(--beige-color);
+    transform: 1s;
+}
