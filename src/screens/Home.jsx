@@ -27,13 +27,13 @@ export const Home = () => {
       </button>
 
       { stock ? (
-        stock.map(
-          (coun, idx) => {
-            return(
-              <StickersGroup key={idx} countryIdx={idx}/>
-            )
-          }
-        )
+          stock.map(
+            (coun, idx) => {
+              return(
+                <StickersGroup key={idx} countryIdx={idx}/>
+              )
+            }
+          )
       ) : (
         <div>No se cargaron figuritas</div>
       ) }

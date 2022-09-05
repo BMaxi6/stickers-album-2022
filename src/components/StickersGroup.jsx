@@ -1,9 +1,7 @@
 import React from 'react'
-import { useState } from 'react'
-import { useEffect } from 'react'
-import { useSelector, useStore } from 'react-redux'
+import { useSelector } from 'react-redux'
 import { StickerItem } from './StickerItem'
-import { CardGroup } from 'react-bootstrap'
+import './stickersGroup.css'
 
 export const StickersGroup = ({countryIdx}) => {
 
@@ -16,13 +14,15 @@ export const StickersGroup = ({countryIdx}) => {
         <h2>
             {countryData.name}
         </h2>
-        { countryData?.items?.map(
-            (quantity, idx) => {
-                return (
-                    <StickerItem key={idx} stickerId={idx} countryIdx={countryIdx}/>
-                )
-            }
-        )}
+        <div className='stickers-container'>
+            { countryData?.items?.map(
+                (quantity, idx) => {
+                    return (
+                        <StickerItem key={idx} stickerId={idx} countryIdx={countryIdx}/>
+                    )
+                }
+            )}
+        </div>
     </div>
     
 

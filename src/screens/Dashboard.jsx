@@ -7,8 +7,8 @@ export const Dashboard = () => {
     const dashboard = useSelector( state => state.dashboard )
 
   return (
-    <div>
-        <h1>Dashboard</h1>    
+    <div className='padding-body'>
+        <h1>QATAR 2022 Dashboard</h1>    
         { dashboard ? 
             (
                 <div>
