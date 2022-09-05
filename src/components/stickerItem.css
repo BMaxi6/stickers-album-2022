@@ -1,0 +1,30 @@
+@import url("./../App.css");
+
+.obtained-sticker {
+    background-color: var(--obtained-sticker);
+}
+
+.repeted-sticker {
+    background-color: var(--repeted-sticker);
+}
+
+.centred-element {
+    display: flex;
+    justify-content: center;
+}
+
+.sticker-container {
+    display: inline-flex;
+    text-align: center;
+}
+
+.sticker-button {
+    border: none;
+    /* width: 2.5rem; */
+    background-color: transparent;
+}
+
+.sticker-text {
+    width: 2.3rem;
+    text-align: center;
+}

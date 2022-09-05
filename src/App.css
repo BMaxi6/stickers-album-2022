@@ -2,11 +2,15 @@
 @import 'bootstrap/dist/css/bootstrap.min.css';
 
 :root {
-  --white-color: #f9f9f9;
-  --beige-color: #e1c396;
-  --brown-color: #b09677;
-  --bordo-color: #8d1c3d;
+  --white-color: #F9F9F9;
+  --beige-color: #E1C396;
+  --brown-color: #B09677;
+  --bordo-color: #8D1C3D;
   --title-font: 'Rubik', sans-serif;
+
+  --obtainer-sticker: #63A194;
+  --missing-sticker: var(--white-color);
+  --repeted-sticker: #E1C396;
 }
 
 .padding-body {
@@ -20,5 +24,5 @@ h1 {
 }
 
 p {
-  font-size: 10px;
+  font-size: 15px;
 }

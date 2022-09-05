@@ -23,6 +23,9 @@ export const Header = () => {
             <Nav.Link>
               <Link to="missing" className="header-link">Faltantes</Link>
             </Nav.Link>
+            <Nav.Link>
+              <Link to="dashboard" className="header-link">Dashboard</Link>
+            </Nav.Link>
           </Nav>
         </Container>
       </Navbar>
