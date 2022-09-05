@@ -11,16 +11,16 @@ const addStickerToObj = (obj, countryIdx, stickerIdx) => {
         obj.dashboard.obtaineds += 1
         obj.dashboard.missings -= 1
     }
-    obj.countries[countryIdx].items[stickerIdx] = obj.countries[countryIdx].items[stickerIdx] + 1;
+    obj.countries[countryIdx].items[stickerIdx] += 1;
     return obj
 }
 
 const removeStickerToObj = (obj, countryIdx, stickerIdx) => {
+    obj.countries[countryIdx].items[stickerIdx] -= 1;
     if(obj.countries[countryIdx].items[stickerIdx] === 0){
         obj.dashboard.obtaineds -= 1
-        obj.dashboard.missing += 1
+        obj.dashboard.missings += 1
     }
-    obj.countries[countryIdx].items[stickerIdx] = obj.countries[countryIdx].items[stickerIdx] - 1;
     return obj
 }
 
@@ -43,7 +43,7 @@ export const stickerReducer = (state = sticker_initial_state, action) => {
             let obj = {
                 ...state
             }
-            obj = removeStickerToObj(obj)
+            obj = removeStickerToObj(obj, action.payload.countryIdx, action.payload.stickerIdx)
             return obj
         }
 
