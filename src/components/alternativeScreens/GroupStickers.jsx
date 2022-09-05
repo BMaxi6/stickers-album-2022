@@ -3,7 +3,6 @@ import { InfoSticker } from './InfoSticker'
 import { RepText } from './RepText'
 
 export const GroupStickers = ({countryName, items, rep}) => {
-  console.log(countryName)
   return (
     <div>
         <h2>{countryName}</h2>
@@ -11,7 +10,7 @@ export const GroupStickers = ({countryName, items, rep}) => {
         items.map(
           (coun, idx) => {
             return(
-                <InfoSticker key={idx} stickerId={idx} />
+                <InfoSticker key={idx} stickerId={coun} />
             )
           }
         )

@@ -5,14 +5,18 @@ import { GroupStickers } from '../components/alternativeScreens/GroupStickers'
 export const Obtained = () => {
 
   const obtainedCountries = useSelector( state => {
-    let pivotCount = []
-    state.countries.map(country => {
-      pivotCount.push({
+    let pivotCountry = []
+    state.countries.map((country,index) => {
+      let pivotStickers = []
+      country.items.forEach( (item, idx) => {
+        if(item > 0) pivotStickers.push(idx)
+      })
+      pivotCountry.push({
         name: country.name,
-        items: country.items.filter(quant => quant > 0)
+        items: pivotStickers
       })
     }) 
-    return pivotCount;
+    return pivotCountry;
   })  
 
   return (
