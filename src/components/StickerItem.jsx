@@ -10,29 +10,20 @@ export const StickerItem = ({stickerId, countryIdx}) => {
   const {quantity, acumular, disminuir} = useCounter(countryIdx, stickerId);
 
   return (
-    <Card style={{ width: '8rem' }}>
-      <ListGroup variant="flush">
-        <ListGroup.Item>
-            <div className={`centred-element ${quantity && "obtained-sticker"}`}>
-                {stickerId}({quantity})
-            </div>
-        </ListGroup.Item>
-        <ListGroup.Item>
-            <div>
-                <div className="sticker-container centred-element">
-                <button className='sticker-button' onClick={disminuir}>
-                        -1
-                </button>
-                </div>
-                |
-                <div className="sticker-container">
-                <button className='sticker-button' onClick={acumular}>
-                        +1
-                </button>
-                </div>
-            </div>
-        </ListGroup.Item>
-      </ListGroup>
-    </Card>
+      <div className='sticker-card'>
+        <div className={`sticker-id centred-item ${quantity && "obtained-sticker"}`}>
+            {stickerId}({quantity})
+        </div>
+        <div className="button-left centred-item">
+          <button className='sticker-button' onClick={disminuir}>
+                  -1
+          </button>
+        </div>
+        <div className="button-right centred-item">
+          <button className='sticker-button' onClick={acumular}>
+                  +1
+          </button>
+        </div>
+      </div>
   )
 }

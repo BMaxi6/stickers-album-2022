@@ -10,13 +10,42 @@
   --title-font: 'Rubik', sans-serif;
   --paragraph-font: 'Montsettat', sans-serif;
 
-  --obtainer-sticker: #63A194;
+  --obtained-sticker: #63A194;
   --missing-sticker: var(--white-color);
   --repeted-sticker: #E1C396;
 }
 
+body {
+  background-color: var(--white-color);
+}
+
 .padding-body {
   padding: 1rem 4rem 1rem 4rem;
+}
+
+.home-button {
+  text-decoration: none;
+  border: none;
+  margin: 1rem;
+}
+
+.home-button-text {
+  border: none;
+  background-color: var(--bordo-color);
+  border-radius: 15px;
+  height: 2.5rem;
+  width: 9rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--white-color);
+  font-weight: 400;
+  transition: 0.5s;
+}
+
+.home-button-text:hover {
+  background-color: #67152D;
+  transition: 0.5s;
 }
 
 h1 {

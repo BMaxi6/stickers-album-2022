@@ -19,11 +19,13 @@ export const Home = () => {
   }
 
   return (
-    <div className="padding-body">
+    <div className="padding-body" style={{textAlign: 'center'}}>
       <h1>QATAR 2022 STICKER ALBUM</h1>
       
-      <button onClick={() => getStick()}>
+      <button className='home-button' onClick={() => getStick()}>
+        <div className='home-button-text'>
         TRAER STICKERS
+        </div>
       </button>
 
       { stock ? (

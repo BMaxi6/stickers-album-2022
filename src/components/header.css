@@ -15,10 +15,10 @@
 .header-link {
     text-decoration: none;
     color: var(--white-color);
-    transform: 1s;
+    transition: 0.3s;
 }
 
 .header-link:hover {
     color: var(--beige-color);
-    transform: 1s;
+    transition: 0.3s;
 }
