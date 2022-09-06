@@ -1,6 +1,7 @@
 import axios from "axios";
 
 const baseURL = "https://warm-shore-70526.herokuapp.com/";
+// const baseURL = "http://localhost:3000/";
 
 export const getStickers = async () => {
   return (await axios.get(baseURL, {
