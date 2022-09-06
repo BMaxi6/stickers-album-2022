@@ -7,3 +7,7 @@ export const getStickers = async () => {
     headers: {"Access-Control-Allow-Headers": "*"}
   })).data;
 }
+
+export const saveStickers = async (stickersState) => {
+  return (await axios.post(baseURL + 'save',stickersState))
+}
